@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.daw.superfiesta.controller.AnimeControllerIntegrationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-15T21:10:56.515Z" hostname="DESKTOP-J32CK4S" time="0.38">
+  <properties/>
+  <testcase name="flujoCompleto_CrearYListar_Retorna201Y200()" classname="com.daw.superfiesta.controller.AnimeControllerIntegrationTest" time="0.075"/>
+  <testcase name="crearAnimeInvalido_Retorna400BadRequest()" classname="com.daw.superfiesta.controller.AnimeControllerIntegrationTest" time="0.01"/>
+  <system-out><![CDATA[2026-11-15T22:10:56.516+01:00  INFO 25528 --- [super-fiesta] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.daw.superfiesta.controller.AnimeControllerIntegrationTest]: AnimeControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-15T22:10:56.518+01:00  INFO 25528 --- [super-fiesta] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.daw.superfiesta.SuperFiestaApplication for test class com.daw.superfiesta.controller.AnimeControllerIntegrationTest
+2026-11-15T22:10:56.518+01:00  INFO 25528 --- [super-fiesta] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.daw.superfiesta.controller.AnimeControllerIntegrationTest]: AnimeControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-15T22:10:56.519+01:00  INFO 25528 --- [super-fiesta] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.daw.superfiesta.SuperFiestaApplication for test class com.daw.superfiesta.controller.AnimeControllerIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-15T22:10:56.530+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.c.AnimeControllerIntegrationTest   : Starting AnimeControllerIntegrationTest using Java 25 with PID 25528 (started by Nitropc in C:\Users\Nitropc\super-fiesta)
+2026-11-15T22:10:56.530+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.c.AnimeControllerIntegrationTest   : The following 1 profile is active: "test"
+2026-11-15T22:10:56.636+01:00  INFO 25528 --- [super-fiesta] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-15T22:10:56.644+01:00  INFO 25528 --- [super-fiesta] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2026-11-15T22:10:56.681+01:00  INFO 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-15T22:10:56.697+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-15T22:10:56.697+01:00  INFO 25528 --- [super-fiesta] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-15T22:10:56.698+01:00  INFO 25528 --- [super-fiesta] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn18: url=jdbc:h2:mem:animetestdb user=SA
+2026-11-15T22:10:56.698+01:00  INFO 25528 --- [super-fiesta] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-15T22:10:56.699+01:00  INFO 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:animetestdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: ANIMETESTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-15T22:10:56.720+01:00  INFO 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15T22:10:56.724+01:00  INFO 25528 --- [super-fiesta] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-15T22:10:56.753+01:00  WARN 25528 --- [super-fiesta] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-15T22:10:56.802+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-15T22:10:56.802+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-15T22:10:56.803+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-15T22:10:56.808+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.c.AnimeControllerIntegrationTest   : Started AnimeControllerIntegrationTest in 0.287 seconds (process running for 5.461)
+2026-11-15T22:10:56.808+01:00  WARN 25528 --- [super-fiesta] [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-11-15T22:10:56.808+01:00  WARN 25528 --- [super-fiesta] [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

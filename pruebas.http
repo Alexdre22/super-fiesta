@@ -1,0 +1,78 @@
+### 1. Listar todos los animes (200 OK)
+GET http://localhost:8080/api/animes
+Accept: application/json
+
+### 2. Obtener anime por ID (200 OK)
+GET http://localhost:8080/api/animes/1
+Accept: application/json
+
+### 3. Obtener Mashup + API Externa + Calculadora Social + Caché (200 OK)
+GET http://localhost:8080/api/animes/mashup
+Accept: application/json
+
+### 4. Crear nuevo anime válido (201 Created)
+POST http://localhost:8080/api/animes
+Content-Type: application/json
+
+{
+  "titulo": "Jujutsu Kaisen",
+  "capitulosVistos": 47,
+  "saltaRelleno": true,
+  "puntuacionPersonal": 9.2,
+  "plataformas": ["Crunchyroll", "Netflix"],
+  "aceptaRiesgoSocial": true
+}
+
+### 5. Provocar error de validación @Valid (400 Bad Request)
+POST http://localhost:8080/api/animes
+Content-Type: application/json
+
+{
+  "titulo": "",
+  "capitulosVistos": -10,
+  "saltaRelleno": true,
+  "puntuacionPersonal": 15.0,
+  "plataformas": [],
+  "aceptaRiesgoSocial": false
+}
+
+### 6. Provocar conflicto de unicidad SQL (409 Conflict)
+POST http://localhost:8080/api/animes
+Content-Type: application/json
+
+{
+  "titulo": "Naruto Shippuden",
+  "capitulosVistos": 10,
+  "saltaRelleno": false,
+  "puntuacionPersonal": 8.0,
+  "plataformas": ["Netflix"],
+  "aceptaRiesgoSocial": true
+}
+
+### 7. Reemplazar anime completo con PUT (200 OK)
+PUT http://localhost:8080/api/animes/1
+Content-Type: application/json
+
+{
+  "titulo": "Naruto Shippuden Completo",
+  "capitulosVistos": 500,
+  "saltaRelleno": true,
+  "puntuacionPersonal": 9.8,
+  "plataformas": ["Crunchyroll", "Prime Video"],
+  "aceptaRiesgoSocial": true
+}
+
+### 8. Actualización parcial con PATCH (200 OK)
+PATCH http://localhost:8080/api/animes/1
+Content-Type: application/json
+
+{
+  "capitulosVistos": 505
+}
+
+### 9. Buscar anime inexistente (404 Not Found)
+GET http://localhost:8080/api/animes/9999
+Accept: application/json
+
+### 10. Eliminar anime (204 No Content)
+DELETE http://localhost:8080/api/animes/2

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests de Persistencia - AnimeRepository" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-15T21:10:53.876Z" hostname="DESKTOP-J32CK4S" time="1.849">
+  <properties/>
+  <testcase name="Debe encontrar un anime por título ignorando mayúsculas y minúsculas" classname="com.daw.superfiesta.repository.AnimeRepositoryTest" time="0.351"/>
+  <testcase name="Debe guardar un anime con sus plataformas y recuperarlo por ID" classname="com.daw.superfiesta.repository.AnimeRepositoryTest" time="0.017"/>
+  <testcase name="Debe filtrar animes con capítulos vistos mayores o iguales al mínimo indicado" classname="com.daw.superfiesta.repository.AnimeRepositoryTest" time="0.013"/>
+  <testcase name="Debe lanzar DataIntegrityViolationException al guardar un título duplicado" classname="com.daw.superfiesta.repository.AnimeRepositoryTest" time="0.019"/>
+  <system-out><![CDATA[2026-11-15T22:10:53.879+01:00  INFO 25528 --- [super-fiesta] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.daw.superfiesta.repository.AnimeRepositoryTest]: AnimeRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-15T22:10:53.900+01:00  INFO 25528 --- [super-fiesta] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.daw.superfiesta.SuperFiestaApplication for test class com.daw.superfiesta.repository.AnimeRepositoryTest
+2026-11-15T22:10:53.901+01:00  INFO 25528 --- [super-fiesta] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.daw.superfiesta.repository.AnimeRepositoryTest]: AnimeRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-15T22:10:53.914+01:00  INFO 25528 --- [super-fiesta] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.daw.superfiesta.SuperFiestaApplication for test class com.daw.superfiesta.repository.AnimeRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-15T22:10:53.940+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.repository.AnimeRepositoryTest     : Starting AnimeRepositoryTest using Java 25 with PID 25528 (started by Nitropc in C:\Users\Nitropc\super-fiesta)
+2026-11-15T22:10:53.940+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.repository.AnimeRepositoryTest     : The following 1 profile is active: "test"
+2026-11-15T22:10:54.053+01:00  INFO 25528 --- [super-fiesta] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-15T22:10:54.079+01:00  INFO 25528 --- [super-fiesta] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+2026-11-15T22:10:54.108+01:00  INFO 25528 --- [super-fiesta] [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-11-15T22:10:54.140+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:90ed8be7-cc49-41cf-ae95-df49cb5a6787;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-11-15T22:10:54.325+01:00  INFO 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-15T22:10:54.364+01:00  INFO 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-15T22:10:54.569+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-15T22:10:54.623+01:00  INFO 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:90ed8be7-cc49-41cf-ae95-df49cb5a6787]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 90ED8BE7-CC49-41CF-AE95-DF49CB5A6787/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-15T22:10:55.115+01:00  INFO 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists anime_plataformas cascade 
+Hibernate: drop table if exists animes cascade 
+Hibernate: create table anime_plataformas (anime_id bigint not null, plataforma varchar(50))
+Hibernate: create table animes (capitulos_vistos integer not null, puntuacion_personal float(53), salta_relleno boolean not null, id bigint generated by default as identity, titulo varchar(150) not null unique, primary key (id))
+Hibernate: alter table if exists anime_plataformas add constraint FKan27nlt53f18ro613d8l1t8g3 foreign key (anime_id) references animes
+2026-11-15T22:10:55.152+01:00  INFO 25528 --- [super-fiesta] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-15T22:10:55.209+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-15T22:10:55.317+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.repository.AnimeRepositoryTest     : Started AnimeRepositoryTest in 1.398 seconds (process running for 3.97)
+Hibernate: insert into animes (capitulos_vistos,puntuacion_personal,salta_relleno,titulo,id) values (?,?,?,?,default)
+Hibernate: select a1_0.id,a1_0.capitulos_vistos,a1_0.puntuacion_personal,a1_0.salta_relleno,a1_0.titulo from animes a1_0 where upper(a1_0.titulo)=upper(?)
+Hibernate: insert into animes (capitulos_vistos,puntuacion_personal,salta_relleno,titulo,id) values (?,?,?,?,default)
+Hibernate: insert into animes (capitulos_vistos,puntuacion_personal,salta_relleno,titulo,id) values (?,?,?,?,default)
+Hibernate: insert into animes (capitulos_vistos,puntuacion_personal,salta_relleno,titulo,id) values (?,?,?,?,default)
+Hibernate: insert into animes (capitulos_vistos,puntuacion_personal,salta_relleno,titulo,id) values (?,?,?,?,default)
+Hibernate: select a1_0.id,a1_0.capitulos_vistos,a1_0.puntuacion_personal,a1_0.salta_relleno,a1_0.titulo from animes a1_0 where a1_0.capitulos_vistos>=?
+Hibernate: insert into animes (capitulos_vistos,puntuacion_personal,salta_relleno,titulo,id) values (?,?,?,?,default)
+Hibernate: insert into anime_plataformas (anime_id,plataforma) values (?,?)
+Hibernate: insert into animes (capitulos_vistos,puntuacion_personal,salta_relleno,titulo,id) values (?,?,?,?,default)
+2026-11-15T22:10:55.719+01:00  WARN 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-11-15T22:10:55.719+01:00  WARN 25528 --- [super-fiesta] [    Test worker] org.hibernate.orm.jdbc.error             : Violación de indice de Unicidad ó Clave primaria: "PUBLIC.CONSTRAINT_7 INDEX PUBLIC.CONSTRAINT_INDEX_7 ON PUBLIC.ANIMES(TITULO NULLS FIRST) VALUES ( /* 6 */ 'Death Note' )"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_7 INDEX PUBLIC.CONSTRAINT_INDEX_7 ON PUBLIC.ANIMES(TITULO NULLS FIRST) VALUES ( /* 6 */ 'Death Note' )"; SQL statement:
+insert into animes (capitulos_vistos,puntuacion_personal,salta_relleno,titulo,id) values (?,?,?,?,default) [23505-240]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

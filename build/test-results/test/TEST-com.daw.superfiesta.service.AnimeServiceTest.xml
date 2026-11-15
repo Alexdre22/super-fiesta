@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.daw.superfiesta.service.AnimeServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-15T21:10:56.898Z" hostname="DESKTOP-J32CK4S" time="0.098">
+  <properties/>
+  <testcase name="obtenerPorId_CuandoNoExiste_LanzaExcepcion()" classname="com.daw.superfiesta.service.AnimeServiceTest" time="0.091"/>
+  <testcase name="obtenerMashup_CalculaPeligroYCombinaDatos()" classname="com.daw.superfiesta.service.AnimeServiceTest" time="0.004"/>
+  <testcase name="listarTodos_RetornaListaMapeada()" classname="com.daw.superfiesta.service.AnimeServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

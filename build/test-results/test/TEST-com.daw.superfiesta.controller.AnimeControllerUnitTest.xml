@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.daw.superfiesta.controller.AnimeControllerUnitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-15T21:10:51.908Z" hostname="DESKTOP-J32CK4S" time="1.962">
+  <properties/>
+  <testcase name="obtenerPorId_CuandoNoExiste_Retorna404()" classname="com.daw.superfiesta.controller.AnimeControllerUnitTest" time="0.147"/>
+  <testcase name="obtenerPorId_CuandoExiste_Retorna200()" classname="com.daw.superfiesta.controller.AnimeControllerUnitTest" time="0.019"/>
+  <system-out><![CDATA[22:10:52.020 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.daw.superfiesta.controller.AnimeControllerUnitTest]: AnimeControllerUnitTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:10:52.128 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.daw.superfiesta.SuperFiestaApplication for test class com.daw.superfiesta.controller.AnimeControllerUnitTest
+22:10:52.130 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.daw.superfiesta.controller.AnimeControllerUnitTest]: AnimeControllerUnitTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:10:52.137 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.daw.superfiesta.SuperFiestaApplication for test class com.daw.superfiesta.controller.AnimeControllerUnitTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-15T22:10:52.400+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.c.AnimeControllerUnitTest          : Starting AnimeControllerUnitTest using Java 25 with PID 25528 (started by Nitropc in C:\Users\Nitropc\super-fiesta)
+2026-11-15T22:10:52.401+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.c.AnimeControllerUnitTest          : The following 1 profile is active: "dev"
+2026-11-15T22:10:53.677+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-15T22:10:53.677+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-15T22:10:53.679+01:00  INFO 25528 --- [super-fiesta] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-15T22:10:53.694+01:00  INFO 25528 --- [super-fiesta] [    Test worker] c.d.s.c.AnimeControllerUnitTest          : Started AnimeControllerUnitTest in 1.514 seconds (process running for 2.347)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\Nitropc\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.18.15\de6980bb799c25bb1fe9e6c434201299cb5e694e\byte-buddy-agent-1.18.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

@@ -65,4 +65,13 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
     }
 
+    // ERROR 500: Error interno genérico no controlado
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> errorGenerico(Exception ex) {
+        ErrorResponse error = new ErrorResponse(
+                500, "Error interno del servidor: " + ex.getMessage()
+        );
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
+    }
+
 }
